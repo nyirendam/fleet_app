@@ -1,0 +1,24 @@
+<% form_for(@car) do |f| %> 
+<%= f.error_messages %> 
+<p>
+<%= f.label "Registration Number" %><br /> 
+<%= f.text_field :regNum %> 
+</p>
+<p> 
+<%= f.label "Model" %>
+<br /> 
+<%= f.text_field :model %> 
+</p>
+<p> 
+<%= f.label "Type" %>
+<br /> 
+<%= f.text_field :carType %> 
+</p> 
+<p> 
+<%= f.label "Colour" %>
+<br /> 
+<%= f.text_field :colour %> 
+<p> 
+<%= f.submit "Save" %> 
+</p> 
+<% end %> 

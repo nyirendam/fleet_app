@@ -1,0 +1,22 @@
+<h1>List of Car Drivers</h1>
+<table> 
+<tr> 
+<th>Employee Id</th> 
+<th>First Name</th> 
+<th>Last Name</th> 
+<th>Gender</th>
+<th>Mobile Number</th>  
+<th>Action List</th> 
+</tr> <% for driver in @drivers %> <tr> 
+<td><%=h driver.employeeId %></td> 
+<td><%=h driver.fname %></td>
+<td><%=h driver.lname %></td>  
+<td><%=h driver.gender %></td> 
+<td><%=h driver.mobileNum %></td>
+<td><%= link_to 'Show', driver %>
+</td> <td><%= link_to 'Edit', edit_driver_path(driver) %>
+</td> <td><%= link_to 'Remove', driver, :confirm => 'Are you sure?', :method => :delete %>
+</td> </tr> 
+<% end %> 
+</table> <br /> 
+<%= link_to 'Add New Driver', new_driver_path %>

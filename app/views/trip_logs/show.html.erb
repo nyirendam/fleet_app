@@ -1,0 +1,24 @@
+<p> 
+<b> Trip Date   :</b> 
+<%=h @triplog.tripDate %>
+</p>
+<p>
+<b> Driver Name :</b> 
+<%# extracts driver's first name and last name given the driver id %>
+<%=h "#{Driver.find(@triplog.driver_id).fname} #{Driver.find(@triplog.driver_id).lname}" %> 
+</p> 
+<p>
+<b>Car Registration:</b> 
+<%# extracts registration number for a car given a car id %>
+<%=h Car.find(@triplog.car_id).regNum %> 
+</p> 
+<p> 
+<b>Location : From </b> 
+<%=h "#{@triplog.locationFrom} To #{@triplog.locationTo}" %> 
+</p> 
+<p> 
+<b>	Mileage : From</b> 
+<%=h "#{@triplog.mileageFrom} km To #{@triplog.mileageTo} km" %> 
+</p> 
+<%= link_to 'Edit', edit_trip_log_path(@triplog) %> | 
+<%= link_to 'Back', trip_logs_path %>

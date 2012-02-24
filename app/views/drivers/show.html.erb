@@ -1,0 +1,22 @@
+<p> 
+<b>Employee ID:</b> 
+<%=h @driver.employeeId %> 
+</p> 
+<p>
+<b>First Name:</b> 
+<%=h @driver.fname %> 
+</p> 
+<p>
+<b>Last Name:</b> 
+<%=h @driver.lname %> 
+</p> 
+<p> 
+<b>Gender:</b> 
+<%=h @driver.gender %> 
+</p> 
+<p> 
+<b>Mobile Number:</b> 
+<%=h @driver.mobileNum %> 
+</p> 
+<%= link_to 'Edit', edit_driver_path(@driver) %> | 
+<%= link_to 'Back', drivers_path %>

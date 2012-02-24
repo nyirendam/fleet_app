@@ -1,0 +1,36 @@
+<% form_for(@driver) do |f| %> 
+<%= f.error_messages %> 
+<p>
+<%= f.label "Employee ID" %>
+<br /> 
+<%= f.text_field :employeeId %> 
+</p>
+<p> 
+<%= f.label "First Name" %>
+<br /> 
+<%= f.text_field :fname %> 
+</p>
+<p> 
+<%= f.label "Last Name" %>
+<br /> 
+<%= f.text_field :lname %> 
+</p> 
+<p> 
+<%= f.label "Gender" %>
+<br />
+<%= 
+	f.select 	:gender,
+				 Driver::GENDER_TYPE,
+				:prompt =>"Select Gender" 
+				
+%> 
+</p>
+<p> 
+<%= f.label "Mobile Number" %>
+<br /> 
+<%= f.text_field :mobileNum %> 
+</p>
+<p> 
+<%= f.submit "Save" %> 
+</p> 
+<% end %> 

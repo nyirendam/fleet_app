@@ -1,0 +1,26 @@
+<h1>List of Trips for the cars</h1>
+<table> 
+<tr> 
+<th>Trip Date</th> 
+<th>Driver</th>
+<th>Car Reg.</th>
+<th>Source </th> 
+<th>Destination</th>  
+</tr> <% for tripLog in @triplogs %> <tr>
+<%# raise @triplogs.to_yaml %>
+<td><%=h tripLog.tripDate %></td> 
+<% driver = Driver.find(tripLog.driver_id) %>
+<td><%=h "#{driver.fname} #{driver.lname}" %></td>
+<% car = Car.find(tripLog.car_id) %>
+<td><%=h "#{car.regNum}" %></td>
+<td><%=h tripLog.locationFrom %></td>
+<td><%=h tripLog.locationTo %></td>  
+ 
+
+<td><%= link_to 'More...', tripLog %>
+</td> <td><%= link_to 'Edit', edit_trip_log_path(tripLog) %>
+</td> <td><%= link_to 'Remove', tripLog, :confirm => 'Are you sure?', :method => :delete %>
+</td> </tr> 
+<% end %> 
+</table> <br /> 
+<%= link_to 'Add New Trip Log', new_trip_log_path %>

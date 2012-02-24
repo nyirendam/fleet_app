@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tripDate: 2012-02-22
+  locationFrom: MyString
+  locationTo: MyString
+  departureTime: 2012-02-22 11:43:23
+  arrivalTime: 2012-02-22 11:43:23
+  mileageFrom: 1
+  mileageTo: 1
+  car: 
+  driver: 
+
+two:
+  tripDate: 2012-02-22
+  locationFrom: MyString
+  locationTo: MyString
+  departureTime: 2012-02-22 11:43:23
+  arrivalTime: 2012-02-22 11:43:23
+  mileageFrom: 1
+  mileageTo: 1
+  car: 
+  driver: 

@@ -1,0 +1,18 @@
+<p> 
+<b>Registration Number:</b> 
+<%=h @car.regNum %> 
+</p> 
+<p>
+<b>Model:</b> 
+<%=h @car.model %> 
+</p> 
+<p> 
+<b>Type:</b> 
+<%=h @car.carType %> 
+</p> 
+<p> 
+<b>Colour:</b> 
+<%=h @car.colour %> 
+</p> 
+<%= link_to 'Edit', edit_car_path(@car) %> | 
+<%= link_to 'Back', cars_path %>
